@@ -1,7 +1,7 @@
 <?php
 // Constants for config.php
 $debugmode = '0'; // 0 = off, 1 = on
-$sqlexpress = '1'; // 0 = MSSQL, 1 = SQLEXPRESS22
+$sqlexpress = '1'; // 0 = MSSQL, 1 = SQLEXPRESS
 $maxnumber_of_checkpoints = '6';
 $min_ipl = '0';
 $max_ipl = '10';
