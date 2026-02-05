@@ -60,8 +60,9 @@ if ( !isset( $_GET['do'] ) || $_GET['do'] != 1 ){
 			if ($stmt === false) {
 				echo ""."</br>";?>
 				<p  style="color:#FF0000">
-				DELETING NOT POSSIBLE!</br></br>
-				Please, go back to the administration area. <a href="admin.php">Administration</a> </p> 
+				DELETING NOT POSSIBLE!</br></p>
+				<div style="color:#000000">Please, go back to the administration area.</div><br>
+				 <a href="admin.php">Administration</a> </p> 
 			<?php }	
 			else {
 			?>
