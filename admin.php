@@ -7,7 +7,7 @@ if ($_SESSION['user_logged'] == "" || $_SESSION['user_password'] == "") {
 	header ("Location:  $redirect");}
 else {
   $title = 'ProCoat Database Editor';  
-			require_once "inc/header.php"
+		//	require_once "inc/header.php"
 ?>
 <html>
 <head>
@@ -45,9 +45,9 @@ print_r($_SESSION);
 
 ?>
 <body> 
-<table border=0 width="600" cellspacing=1 cellpadding=3 bgcolor="#c53c3c"
+<table border=0 width="600" cellspacing=1 cellpadding=3 bgcolor="#353535"
 align="center">
-<td bgcolor="#5d5858" colspan=2 align="center">
+<td bgcolor="#ffffff" colspan=2 align="center">
 Item <a href="item.php?action=add&id=">[ADD]</a></td>
 <?php
 $itemsql = "SELECT * FROM item order by item_name";
@@ -56,9 +56,9 @@ while( $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) )
   {
 ?>
 <tr>
-<td bgcolor="#5d5858" width="50%">
+<td bgcolor="#ffffff" width="50%">
 <?php echo $row['item_name']?></td>
-<td bgcolor="#5d5858" width="50%" align="right">
+<td bgcolor="#ffffff" width="50%" align="right">
 <a href="item.php?action=edit&id=<?php echo
 $row['item_id']?>">[EDIT]</a>
 <a href="delete.php?type=item&id=<?php echo
@@ -67,7 +67,7 @@ $row['item_id']?>">[DELETE]</a></td>
 <?php
 }
 ?>
-<td bgcolor="#5d5858" colspan=2 align="center">
+<td bgcolor="#ffffff" colspan=2 align="center">
 Users <a href="user.php?action=add&id=">[ADD]</a></td>
 <?php
 $usersql = "SELECT * FROM users order by user_name";
@@ -76,9 +76,9 @@ while( $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC))
   {
 ?>
 <tr>
-<td bgcolor="#5d5858" width="50%">
+<td bgcolor="#ffffff" width="50%">
 <?php echo $row['user_name']?></td>
-<td bgcolor="#5d5858" width="50%" align="right">
+<td bgcolor="#ffffff" width="50%" align="right">
 <a href="user.php?action=edit&id=<?php echo
 $row['user_id']?>">[EDIT]</a>
 <a href="delete.php?type=user&id=<?php echo
@@ -87,7 +87,7 @@ $row['user_id']?>">[DELETE]</a></td>
 <?php
 }
 ?>
-<td bgcolor="#5d5858" colspan=2 align="center">
+<td bgcolor="#ffffff" colspan=2 align="center">
 Lacquer <a href="verniz.php?action=add&id=">[ADD]</a></td>
 <?php
 $vernizsql = "SELECT * FROM verniz order by verniz_name";
@@ -96,13 +96,13 @@ while( $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) )
   {
 ?>
 <tr>
-  <td bgcolor="#5d5858"><?php echo $row['verniz_name']?> </td>
-  <td bgcolor="#5d5858" align="right"><a href="verniz.php?action=edit&id=<?php echo
+  <td bgcolor="#ffffff"><?php echo $row['verniz_name']?> </td>
+  <td bgcolor="#ffffff" align="right"><a href="verniz.php?action=edit&id=<?php echo
 $row['verniz_id']?>">[EDIT]</a> <a href="delete.php?type=verniz&id=<?php echo
 $row['verniz_id']?>">[DELETE]</a> </td>
 </tr>
 <?php } ?>
-    <td bgcolor="#5d5858" colspan=2 align="center"> Shutter </td>
+    <td bgcolor="#ffffff" colspan=2 align="center"> Shutter </td>
 
 <tr>
 <?php
@@ -110,12 +110,12 @@ $shuttersql = "SELECT shutter_counts FROM shutter";
 $stmt = sqlsrv_query($conn, $shuttersql);
 $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 ?>
-<td bgcolor="#5d5858" width="50%">Shutter movements: <?php echo $row['shutter_counts'] ?></td>
+<td bgcolor="#ffffff" width="50%">Shutter movements: <?php echo $row['shutter_counts'] ?></td>
 <?php
 if ($row['shutter_counts'] > '1000000') {?>
-<td bgcolor="#5d5858" width="50%" align="right"><div align="center" class="style1">Shutter needs to be changed!</div></td> 
+<td bgcolor="#ffffff" width="50%" align="right"><div align="center" class="style1">Shutter needs to be changed!</div></td> 
 <?php } else { ?>
-<td bgcolor="#5d5858" width="50%"> </td> <?php } ?>
+<td bgcolor="#ffffff" width="50%"> </td> <?php } ?>
 </tr>
 <?php } ?>
 </table>
