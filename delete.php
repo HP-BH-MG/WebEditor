@@ -58,8 +58,9 @@ if ( !isset( $_GET['do'] ) || $_GET['do'] != 1 ){
 			if ($debugmode <> 0) echo "SQL: ".$tsql."</br>";
 			$stmt = sqlsrv_query($conn, $tsql);
 			if ($stmt === false) {
-				echo "Deleting not possible!";?>
+				echo ""."</br>";?>
 				<p  style="color:#FF0000">
+				DELETING NOT POSSIBLE!</br></br>
 				Please, go back to the administration area. <a href="admin.php">Administration</a> </p> 
 			<?php }	
 			else {
