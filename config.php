@@ -22,7 +22,7 @@ $max_ipl_ri = 4;
 
 $user = 'procoat';   // Name for database user procoat
 $pw = 'tla';        // Password for databse user i.e tla
-$db = 'prado'; // Database name i.e procoat. Change this to the name of your database
+$db = 'Braslux22'; // Database name i.e procoat. Change this to the name of your database
 
 // NEU (Zeile 2):
 if (session_status() === PHP_SESSION_NONE) {
