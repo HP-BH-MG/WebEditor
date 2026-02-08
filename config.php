@@ -1,7 +1,7 @@
 <?php
 // Constants for config.php
 $debugmode = '0'; // 0 = off, 1 = on
-$sqlexpress = '1'; // 0 = MSSQL, 1 = SQLEXPRESS
+$sqlexpress = '0'; // 0 = MSSQL, 1 = SQLEXPRESS
 $maxnumber_of_checkpoints = '6';
 $min_ipl = '0';
 $max_ipl = '10';
@@ -22,7 +22,7 @@ $max_ipl_ri = 4;
 
 $user = 'procoat';   // Name for database user procoat
 $pw = 'tla';        // Password for databse user i.e tla
-$db = 'Braslux22'; // Database name i.e procoat. Change this to the name of your database
+$db = 'arteb'; // Database name i.e procoat. Change this to the name of your database
 
 // NEU (Zeile 2):
 if (session_status() === PHP_SESSION_NONE) {
